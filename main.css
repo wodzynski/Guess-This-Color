@@ -6,46 +6,30 @@ body {
   margin: 0;
 }
 
-h1 {
-  margin: 20px auto;
-  text-align: center;
-}
-
-#red {
-  grid-column-start: 2;
-  background-color: var(--bar-color);
-}
-
-#green {
-  background-color: var(--bar-color);
-}
-
-#blue {
-  background-color: var(--bar-color);
-}
-
 #board {
   text-align: center;
   padding: 0 0;
   margin: 20px auto;
+  min-width: 480px;
   display: grid;
   grid-gap: 5px;
   grid-template-columns: 1fr 150px 150px 150px 1fr;
-  grid-template-rows: 50px 150px 150px 150px;
+  grid-template-rows: 100px 30px 150px 150px 150px 150px;
 }
 
-#r1 {
+#header {
+  grid-column: 1 / -1;
+}
+
+#optionBar {
+  grid-column: 1 / -1;
+}
+
+.red {
   grid-column-start: 2;
 }
 
-#r2 {
-  grid-column-start: 2;
-}
-
-#r3 {
-  grid-column-start: 2;
-}
-
-.colorName {
-  background-color: blue;
+#blender {
+  grid-column: 2 / -2;
+  background-color: aqua;
 }
