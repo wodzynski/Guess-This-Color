@@ -1,6 +1,6 @@
-var redSelectors = document.querySelectorAll(".red");
-var greenSelectors = document.querySelectorAll(".green");
-var blueSelectors = document.querySelectorAll(".blue");
+var rSelectors = document.querySelectorAll(".red");
+var gSelectors = document.querySelectorAll(".green");
+var bSelectors = document.querySelectorAll(".blue");
 
 var reds = [];
 var greens = [];
@@ -10,10 +10,10 @@ getReds();
 getBlues();
 getGreens();
 
-for (let i = 0; i < redSelectors.length; i++) {
-  redSelectors[i].style.backgroundColor = reds[i];
-  greenSelectors[i].style.backgroundColor = greens[i];
-  blueSelectors[i].style.backgroundColor = blues[i];
+for (let i = 0; i < 3; i++) {
+  rSelectors[i].style.backgroundColor = reds[i];
+  gSelectors[i].style.backgroundColor = greens[i];
+  bSelectors[i].style.backgroundColor = blues[i];
 }
 
 function getReds() {
@@ -32,6 +32,10 @@ function getBlues() {
   for (let i = 0; i < 3; i++) {
     blues[i] = "rgb(0, 0, " + rgbValue() + ")";
   }
+}
+
+function oneFromThree() {
+  return Math.floor(Math.random() * 3);
 }
 
 function rgbValue() {
